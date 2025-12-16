@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scan & Smile – Blinkit</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SCREEN 1 : WELCOME -->
+  <section class="screen active" id="welcome">
+    <div class="card">
+      <h1>😊 Scan & Smile</h1>
+      <p>Hey Blinkit Star!  
+      Ready for a little surprise?</p>
+      <button onclick="goTo('bubbleGame')">Start the Fun 🎉</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 2 : BUBBLE GAME -->
+  <section class="screen" id="bubbleGame">
+    <h2>Pop a Bubble 🎈</h2>
+    <p>Tap ONE bubble to reveal your surprise</p>
+
+    <div class="bubbles">
+      <div class="bubble" onclick="popBubble(this)">10% OFF</div>
+      <div class="bubble" onclick="popBubble(this)">15% OFF</div>
+      <div class="bubble" onclick="popBubble(this)">FREE DELIVERY</div>
+      <div class="bubble" onclick="popBubble(this)">Better Luck 😅</div>
+      <div class="bubble" onclick="popBubble(this)">10% OFF</div>
+    </div>
+  </section>
+
+  <!-- SCREEN 3 : RESULT -->
+  <section class="screen" id="result">
+    <div class="card">
+      <h2 id="resultText"></h2>
+      <p id="resultSub"></p>
+      <button onclick="goTo('love')">Continue 💛</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 4 : CUSTOMER LOVE -->
+  <section class="screen" id="love">
+    <div class="card">
+      <h2>💛 Thank You</h2>
+      <p>You’re one of our favourite customers.  
+      Thanks for choosing Blinkit for your everyday needs.</p>
+      <button onclick="goTo('puzzle')">Play More 🎮</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 5 : PUZZLE -->
+  <section class="screen" id="puzzle">
+    <div class="card">
+      <h2>🧩 Mini Puzzle</h2>
+      <p>Just for fun 😄</p>
+      <div class="puzzle-box">
+        <span>B</span><span>L</span><span>I</span><span>N</span><span>K</span><span>I</span><span>T</span>
+      </div>
+      <button onclick="goTo('final')">Done ✔️</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 6 : FINAL OPTIONS -->
+  <section class="screen" id="final">
+    <div class="card">
+      <h2>✨ What next?</h2>
+      <button onclick="showQuote()">Get a Happy Quote</button>
+      <button onclick="goTo('writeMessage')">Send a Smile to a Friend 💌</button>
+      <p id="quote"></p>
+    </div>
+  </section>
+
+  <!-- SCREEN 7 : WRITE MESSAGE -->
+  <section class="screen" id="writeMessage">
+    <div class="card">
+      <h2>💌 Write a message</h2>
+      <textarea id="userMessage" placeholder="Write something sweet..."></textarea>
+      <button onclick="generateLink()">Generate Link 🔗</button>
+      <p id="shareLink"></p>
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
